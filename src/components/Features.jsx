@@ -11,18 +11,18 @@ const Features = () => {
             </li>
             <li className="features-box">
               <img src="simple-icons_freelancer.png" alt="" />
-              <h4>Dedicated Team</h4>
-              <p>Hire talent sebagai karyawan outsource.</p>
+              <h4>Freelance Team</h4>
+              <p>Hire talent freelance berbasis man-hour.</p>
             </li>
             <li className="features-box">
               <img src="employee.png" alt="" />
-              <h4>Dedicated Team</h4>
-              <p>Hire talent sebagai karyawan outsource.</p>
+              <h4>Head Hunter</h4>
+              <p>Hire talent sebagai karyawan internal anda.</p>
             </li>
             <li className="features-box">
               <img src="projection.png" alt="" />
-              <h4>Dedicated Team</h4>
-              <p>Hire talent sebagai karyawan outsource.</p>
+              <h4>Project Based</h4>
+              <p>Hire vendor / freelance berbasis project.</p>
             </li>
           </ul>
         </div>

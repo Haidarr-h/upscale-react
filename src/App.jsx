@@ -5,6 +5,7 @@ import Hero from "./components/hero";
 import Features from "./components/Features";
 import Partners from "./components/Partners";
 import Konten from "./components/Konten";
+import Footer from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,13 +17,7 @@ function App() {
       <Features></Features>
       <Partners></Partners>
       <Konten></Konten>
-      
-      <h1 className="bg-red-500 text-white p-4 text-2xl">
-        Tailwind is working!
-      </h1>
-      <h1 className="bg-blue-500 text-white p-4 text-2xl">
-        Tailwind is working!
-      </h1>
+      <Footer></Footer>
     </>
   );
 }
