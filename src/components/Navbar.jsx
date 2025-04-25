@@ -1,8 +1,8 @@
 const Navbar = () => {
   return (
     <>
-      <div className="w-full bg-[#37517E] py-[20px] px-[4%] xl:px-0">
-        <nav className="max-w-[1200px] mx-auto flex justify-between items-center align-middle text-xs lg:text-base">
+      <section className="w-full bg-[#37517E] ">
+        <nav className="max-w-[1200px] mx-auto flex justify-between items-center align-middle text-xs lg:text-base py-[20px] px-[4%] xl:px-0">
           {/* !* Logo */}
           <div className="">
             <img
@@ -79,7 +79,7 @@ const Navbar = () => {
             </button>
           </div>
         </nav>
-      </div>
+      </section>
     </>
   );
 };

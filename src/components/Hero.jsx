@@ -4,10 +4,10 @@ import React from "react";
 const Hero = () => {
   return (
     <>
-      <section className="bg-[url('/public/Mask-group.png')] bg-cover ">
+      <section className="bg-[url('/Mask-group.png')] bg-cover">
         <div className="max-w-[1200px] mx-auto flex flex-col items-center text-center text-white gap-[48px] px-[4%] lg:px-0 pt-[63px] pb-[102px]">
-          <h1 className="text-4xl">Hire Talent On-Demand</h1>
-          <h1>
+          <h1 className="">Hire Talent On-Demand</h1>
+          <h1 className="text-[36px]">
             Kami membantu meng-handle semua urusan "talent", agar anda dapat
             fokus pada pengembangan bisnis
           </h1>
