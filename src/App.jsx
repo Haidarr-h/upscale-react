@@ -12,9 +12,8 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
       <Hero></Hero>
-      <Features></Features>
+      {/* <Features></Features> */}
       <Partners></Partners>
       <Konten></Konten>
       <Footer></Footer>

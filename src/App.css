@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  @apply font-poppin box-border ;
+  @apply font-roboto box-border ;
 }
 
 body {
@@ -12,55 +12,81 @@ body {
 }
 
 h1 {
-  @apply font-bold text-[32px] lg:text-[40px] leading-[120%] tracking-normal;
+  @apply font-bold text-[30px] lg:text-[35px] leading-[120%] tracking-normal;
 }
 
 h2 {
-  @apply font-bold text-[28px] lg:text-[36px] leading-[120%] tracking-normal;
+  @apply font-bold text-[20px] lg:text-[25px] leading-[120%] tracking-normal;
 }
 
 h3 {
-  @apply font-semibold text-[24px] lg:text-[30px] leading-[120%] tracking-normal;
-}
-
-h4 {
-  @apply font-semibold text-[20px] lg:text-[28px] leading-[120%] tracking-normal;
+  @apply font-semibold text-[20px] lg:text-[23px] leading-[120%] tracking-normal;
 }
 
 p {
-  @apply font-normal text-[18px] lg:text-[22px] leading-[140%] tracking-normal;
+  @apply font-normal text-[18px] lg:text-[20px] leading-[140%] tracking-normal;
 }
 
+/* ! navbar */
+.menus {
+  @apply hidden lg:flex space-x-8 text-white font-semibold;
+}
+
+.menus li a {
+  @apply hover:text-[rgb(71,178,228)];
+}
+
+.menus button {
+  @apply hover:text-[rgb(71,178,228)];
+}
+
+
+/* ! features */
 .features-box {
-  @apply border bg-[#E9EDF5] rounded-xl flex flex-col justify-between mx-auto items-center gap-[20px] text-center py-[30px] px-[30px];
+  @apply border bg-[#E9EDF5] rounded-xl shadow-lg flex flex-col justify-between mx-auto items-center gap-[20px] text-center py-[20px] px-[20px] w-[300px] font-jost;
 }
 
 .features-box img {
   @apply max-w-[60px] h-auto border rounded-full p-3 bg-[#CED8E9];
 }
 
+.features-box div {
+  @apply flex flex-col gap-[5px] justify-between ;
+}
+
 .features-box h4 {
-  @apply font-semibold text-[20px] lg:text-[28px] leading-[120%] tracking-normal;
+  @apply font-semibold text-[18px] lg:text-[20px] leading-[120%] tracking-normal;
 }
 
 .features-box p {
-  @apply font-normal text-[18px] lg:text-[22px] leading-[140%] tracking-normal;
+  @apply font-normal text-[16px] lg:text-[18px] leading-[140%] tracking-normal;
 }
 
+/* ! detail di konten section 1 */
+
 .detail h4 {
-  @apply text-[22px];
+  @apply text-[22px] font-jost font-semibold;
 }
 
 .detail p {
-  @apply text-[18px];
+  @apply text-[18px] font-jost;
 }
 
+.detail div {
+  @apply space-y-6;
+}
+
+/* ! konten 2: departemen */
 .konten2-box div {
-  @apply flex flex-col gap-[20px];
+  @apply flex flex-col gap-[10px];
 }
 
 .konten2-box div h5 {
-  @apply text-[22px] font-semibold;
+  @apply text-[28px] font-medium font-jost;
+}
+
+.konten2-box div p {
+  @apply font-jost font-light w-2/3 mx-auto text-[18px];
 }
 
 /* ! konten 3 */
@@ -69,31 +95,43 @@ p {
 }
 
 .konten-3-kotak-poin h1 {
-  @apply border rounded-full py-1 px-5 bg-gradient-to-r from-[#A3B8D6] via-[#4F73A8] to-[#37517E] text-white;
+  @apply border rounded-full shadow-lg w-12 h-12 flex items-center justify-center bg-gradient-to-r from-[#A3B8D6] via-[#4F73A8] to-[#37517E] text-white text-[20px];
 }
 
 .konten-3-kotak-poin h3 {
-  @apply text-[22px] font-semibold;
+  @apply text-[26px] font-medium font-jost;
 }
 
 .konten-3-kotak-poin p {
-  @apply text-[16px] font-semibold;
+  @apply text-[20px] font-light;
 }
 
-/* !konten 6 */
+/* !konten 6: recruitment type */
 .arrow-box div {
   @apply flex flex-row gap-3 align-middle items-center;
 }
 
 .arrow-box div img {
-  @apply max-h-[47px] w-auto;
+  @apply max-h-[20px] w-auto;
+}
+
+.arrow-box div p {
+  @apply font-normal font-jost;
+}
+
+.tablez tr td {
+  @apply font-jost;
 }
 
 /* !footer */
 .left-box-footer div img {
-  @apply max-w-[35px] h-auto;
+  @apply max-w-[20px] xl:max-w-[30px] h-auto;
 }
 
 .left-box-footer div {
   @apply flex flex-row gap-3 align-middle items-center;
+}
+
+.left-box-footer div p {
+  @apply font-jost font-light;
 }

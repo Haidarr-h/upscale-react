@@ -1,7 +1,28 @@
+import React, { useState, useEffect, use } from "react";
+
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <section className="w-full bg-[#37517E] ">
+      <section
+        className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
+          scrolled ? "bg-[#37517E]" : "bg-transparent"
+        }`}
+      >
         <nav className="max-w-[1200px] mx-auto flex justify-between items-center align-middle text-xs lg:text-base py-[20px] px-[4%] xl:px-0">
           {/* !* Logo */}
           <div className="">
@@ -13,41 +34,41 @@ const Navbar = () => {
           </div>
 
           {/* !* Menu */}
-          <ul className="hidden lg:flex space-x-8 text-white font-normal ">
+          <ul className=" menus">
             <li>
-              <a href="#" className="hover:text-blue-500">
+              <a href="#">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500">
+              <a href="#">
                 For Business
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500">
+              <a href="#">
                 For Talent
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500">
+              <a href="#">
                 Jobs
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-500">
+              <a href="#">
                 F.A.Q
               </a>
             </li>
-            <li>
+            <li className="items-center align-middle">
               <a
                 href="#"
-                className="hover:text-blue-500 flex flex-row gap-[15px]"
+                className="flex flex-row gap-[15px]"
               >
                 <img
                   src="https://upscale.id/template/upscale/media/id.png"
                   alt="indonesia"
-                  className="min-w-[25px] h-auto"
+                  className="w-[18px] h-[12px] my-auto"
                 />
                 ID
               </a>
@@ -55,9 +76,11 @@ const Navbar = () => {
           </ul>
 
           {/* right side menus */}
-          <div className="hidden lg:flex flexrow gap-[30px] text-white font-normal">
+          <div className="menus gap-[30px]">
             <button>Login</button>
-            <button className="border border-white text-white bg-transparent rounded-full px-3 py-1">Live Chat</button>
+            <button className="border border-white text-white bg-transparent rounded-full px-3 py-1">
+              Live Chat
+            </button>
           </div>
 
           {/* Mobile menu button (hamburger icon) */}
