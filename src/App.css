@@ -51,7 +51,7 @@ p {
 
 /* ! features */
 .features-box {
-  @apply border bg-[#E9EDF5] rounded-xl shadow-lg flex flex-col justify-between mx-auto items-center gap-[20px] text-center py-[20px] px-[20px] w-[300px] font-jost;
+  @apply border bg-[#E9EDF5] rounded-xl shadow-lg flex flex-col justify-between mx-auto items-center gap-[20px] text-center py-[20px] px-[20px] w-[300px] font-jost hover:scale-105;
 }
 
 .features-box img {

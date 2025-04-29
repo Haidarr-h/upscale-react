@@ -20,7 +20,7 @@ const Navbar = () => {
     <>
       <section
         className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
-          scrolled ? "bg-[#37517E]" : "bg-transparent"
+          scrolled ? "bg-[#37517E]" : "bg-transparent backdrop-blur-sm"
         }`}
       >
         <nav className="max-w-[1200px] mx-auto flex justify-between items-center align-middle text-xs lg:text-base py-[20px] px-[4%] xl:px-0">
@@ -78,7 +78,7 @@ const Navbar = () => {
           {/* right side menus */}
           <div className="menus gap-[30px]">
             <button>Login</button>
-            <button className="border border-white text-white bg-transparent rounded-full px-3 py-1">
+            <button className="border backdrop-blur-lg border-white text-white bg-transparent rounded-full px-3 py-1">
               Live Chat
             </button>
           </div>

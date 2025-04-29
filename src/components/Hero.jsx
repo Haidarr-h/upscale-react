@@ -47,10 +47,10 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-row gap-[40px]">
-              <button className=" bg-[#446496] rounded-full px-4 py-2 hover:bg-[#6f8db9]">
+              <button className=" bg-[#446496] shadow-2xl rounded-full px-4 py-2 hover:bg-[#6f8db9]">
                 Request Quotation
               </button>
-              <button className="border bg-transparent rounded-full px-4 py-2 hover:bg-[#6f8db9]">
+              <button className="border bg-transparent shadow-2xl rounded-full px-4 py-2 hover:bg-[#6f8db9]">
                 Join As Talent
               </button>
             </div>
