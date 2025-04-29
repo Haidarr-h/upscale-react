@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  @apply font-roboto box-border ;
+  @apply font-roboto box-border;
 }
 
 body {
@@ -40,6 +40,14 @@ p {
   @apply hover:text-[rgb(71,178,228)];
 }
 
+/* ! hero */
+.highlighted-text {
+  display: inline;
+  background: rgba(75, 109, 161, 0.3); /* blueish semi-transparent */
+  border-radius: 4px; /* slightly rounded */
+  padding: 0.1em 0.25em; /* tight padding around text */
+  backdrop-filter: blur(2px); /* optional: add slight blur */
+}
 
 /* ! features */
 .features-box {
@@ -51,7 +59,7 @@ p {
 }
 
 .features-box div {
-  @apply flex flex-col gap-[5px] justify-between ;
+  @apply flex flex-col gap-[5px] justify-between;
 }
 
 .features-box h4 {
