@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Features = () => {
   const [activeFeature, setActiveFeature] = useState(null);
@@ -42,7 +43,13 @@ const Features = () => {
   return (
     <>
       <section className="relative z-30 w-full">
-        <div className="max-w-[1200px] mx-auto relative -top-[80px]">
+        <motion.div
+          initial={{ rotate: 45, scale: 0.5 }}
+          animate={{ rotate: 0, scale: 1 }}
+          transition={{ ease: "backOut", duration: 2 }}
+          viewport={{ once:false }}
+          className="max-w-[1200px] mx-auto relative -top-[80px]"
+        >
           <ul className="flex flex-col xl:flex-row gap-[25px]">
             {features.map((feature) => (
               <li
@@ -58,7 +65,7 @@ const Features = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
 
         {/* Modal */}
         {activeFeature && (
@@ -67,7 +74,9 @@ const Features = () => {
               <button
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
                 onClick={() => setActiveFeature(null)}
-              >X</button>
+              >
+                X
+              </button>
               <h2 className="text-2xl font-bold mb-4">{activeFeature.title}</h2>
               <p className="text-gray-700">{activeFeature.detail}</p>
             </div>

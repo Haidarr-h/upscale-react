@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/navbar";
-import Hero from "./components/hero";
+import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Partners from "./components/Partners";
 import Konten from "./components/Konten";

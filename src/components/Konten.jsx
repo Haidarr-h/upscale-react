@@ -1,24 +1,45 @@
+import Departement from "./Departement";
+import { motion } from "framer-motion";
+
 const Konten = () => {
   return (
     <>
       {/* ! section 1 : fokuskan perhatian anda */}
       <section className="bg-white w-full ">
         <div className="max-w-[1200px] mx-auto px-[4%] xl:px-0 flex flex-col gap-[60px] text-center pt-[85px] pb-[126px]">
-          <div>
-            <h1 className="text-[#293751] font-jost font-semibold">
+          <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: false }}
+          >
+            <h1 className="text-[#293751] opacity-0 animate-slide-up animation-delay-700 font-jost font-semibold">
               Fokuskan perhatian pada strategi pengembangan bisnis Anda.
             </h1>
-            <p className="mt-[30px] font-jost w-2/3 text-center mx-auto">
+            <p className="mt-[30px] font-jost w-2/3 animate-slide-up animation-delay-700 text-center mx-auto">
               Kami akan meng-handle urusan perpajakan, legal dan management.
               Kami memiliki framework kerja yang terbukti efektif untuk
               kolaborasi team dan juga terdapat tools memonitor produktivitas
               secara real-time.
             </p>
-          </div>
+          </motion.div>
 
-          <img src="devices.png" alt="" />
+          <motion.img
+            src="https://upscale.id/template/upscale/media/devices.png?_r=68107e2b9dd5d"
+            alt=""
+            initial={{ scale: 0.2, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: false }}
+          />
 
-          <div className="flex flex-col xl:flex-row gap-[30px] detail">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false }}
+            className="flex flex-col xl:flex-row gap-[30px] detail"
+          >
             <div className="">
               <h4>Kecepatan Rekrutmen</h4>
               <p>
@@ -40,45 +61,12 @@ const Konten = () => {
                 produktif.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Konten 2 : Departemen apa yang anda butuhkan ? */}
-      <section className="w-full bg-gradient-to-r from-[#A3B8D6] via-[#4F73A8] to-[#37517E]">
-        <div className="max-w-[1200px] mx-auto px-[4%] xl:px-0 flex flex-col gap-[50px] text-center py-[50px] text-white">
-          <h1 className="font-jost font-medium">
-            Departemen apa yang Anda butuhkan saat ini?
-          </h1>
-          <p className="font-jost xl:w-1/2 mx-auto opacity-80">
-            Talent kami mencakup, namun tidak terbatas pada Software Developer,
-            Quality Assurance, Graphic Designer, UX Designer, Product Manager,
-            Keuangan, Data Entry, dll. Talent kami sangat disiplin dan memiliki
-            passion terhadap produktifitas dan teknologi.
-          </p>
-
-          <div className="konten2-box flex flex-col xl:flex-row gap-[40px] text-center">
-            <div className="">
-              <h5 className="">Talent Pool</h5>
-              <h5 className="">100000 +</h5>
-              <p>Talent pool dari partnership, komunitas, dan universitas.</p>
-            </div>
-            <div>
-              <h5>Talent Tersalurkan</h5>
-              <h5>7000 +</h5>
-              <p>Talent tersalurkan dan bekerja untuk client kami.</p>
-            </div>
-            <div>
-              <h5>Happy Clients</h5>
-              <h5>100 +</h5>
-              <p>
-                Sejak tahun 2009, UpScale telah dipercaya oleh ratusan
-                perusahaan
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Departement></Departement>
 
       {/* ! Konten 3 : bagaimna prosedur kami ? */}
       <section className="w-full bg-white">
