@@ -45,11 +45,6 @@ const Hero = () => {
           playsInline
         />
 
-        {/* Navbar */}
-        <div className="relative z-60">
-          <Navbar></Navbar>
-        </div>
-
         {/* hero section (title etc) */}
         <div className="relative z-30 max-w-[1200px] mx-auto px-[4%] xl:px-0 mt-[200px]">
           <div className="w-4/5 mx-auto flex flex-col items-center text-center text-white gap-[48px]">

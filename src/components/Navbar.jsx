@@ -1,4 +1,5 @@
 import React, { useState, useEffect, use } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -36,35 +37,22 @@ const Navbar = () => {
           {/* !* Menu */}
           <ul className=" menus">
             <li>
-              <a href="#">
-                Home
-              </a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#">
-                For Business
-              </a>
+              <Link to="/for-business">For Business</Link>
             </li>
             <li>
-              <a href="#">
-                For Talent
-              </a>
+              <Link to="/for-talent">For Talent</Link>
             </li>
             <li>
-              <a href="#">
-                Jobs
-              </a>
+              <Link to="/jobs">Jobs</Link>
             </li>
             <li>
-              <a href="#">
-                F.A.Q
-              </a>
+              <Link to="/jobs">F.A.Q</Link>
             </li>
             <li className="items-center align-middle">
-              <a
-                href="#"
-                className="flex flex-row gap-[15px]"
-              >
+              <a href="#" className="flex flex-row gap-[15px]">
                 <img
                   src="https://upscale.id/template/upscale/media/id.png"
                   alt="indonesia"

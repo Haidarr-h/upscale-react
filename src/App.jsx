@@ -1,23 +1,23 @@
 import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/navbar";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import Partners from "./components/Partners";
-import Konten from "./components/Konten";
 import Footer from "./components/Footer";
+import Home from "./pages/HomePage";
+import ForBusiness from "./pages/ForBusiness";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-      <Hero></Hero>
-      {/* <Features></Features> */}
-      <Partners></Partners>
-      <Konten></Konten>
+    <Router>
+      <Navbar></Navbar>
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/for-business" element={<ForBusiness></ForBusiness>}></Route>
+      </Routes>
       <Footer></Footer>
-    </>
+    </Router>
   );
 }
 
