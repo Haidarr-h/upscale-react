@@ -28,6 +28,12 @@ p {
   @apply font-normal text-[18px] lg:text-[20px] leading-[140%] tracking-normal;
 }
 
+/* ! for container */
+.container-main {
+  @apply max-w-[1200px] mx-auto px-[4%] xl:px-0;
+}
+
+
 /* ! navbar */
 .menus {
   @apply hidden lg:flex space-x-8 text-white font-semibold;
