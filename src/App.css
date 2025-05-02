@@ -4,11 +4,12 @@
 @tailwind utilities;
 
 * {
-  @apply font-roboto box-border;
+  @apply p-0 m-0 box-border;
 }
 
 body {
   @apply overflow-x-hidden;
+  @apply font-roboto box-border;
 }
 
 h1 {
@@ -143,3 +144,25 @@ p {
 .left-box-footer div p {
   @apply font-jost font-light;
 }
+
+/* ! for business */
+.forBusiness-card {
+  @apply flex flex-col gap-[15px] max-w-[340px] h-auto mx-auto rounded-md hover:scale-105 hover:cursor-pointer;
+}
+
+.forBusiness-card img {
+  @apply max-h-[255px] w-auto object-contain rounded-md;
+}
+
+.forBusiness-card h3 {
+  @apply font-jost font-medium text-[20px];
+}
+
+.forBusiness-card p {
+  @apply font-jost font-light opacity-80 text-[18px];
+}
+
+.forBusiness-card a {
+  @apply font-jost font-medium text-[18px] text-blue-300 hover:underline flex flex-row gap-3;
+}
+
