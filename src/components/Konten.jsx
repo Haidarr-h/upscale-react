@@ -1,5 +1,6 @@
 import Departement from "./Departement";
 import { motion } from "framer-motion";
+import AnimatedCounter from "./AnimatedCounter";
 
 const Konten = () => {
   return (
@@ -173,7 +174,7 @@ const Konten = () => {
               seputar managemen seperti timeline, finance, KPI building, dll.
             </p>
             <h3 className="font-jost font-medium">Estimated Talent Matching</h3>
-            <h5 className="font-jost font-medium text-[30px]">14 days</h5>
+            <h5 className="font-jost font-medium text-[30px]"> <AnimatedCounter from={0} to={14} duration={4}></AnimatedCounter> days</h5>
           </div>
 
           {/* kanan */}

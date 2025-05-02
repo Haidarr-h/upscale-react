@@ -1,8 +1,9 @@
 import React, { useState, useEffect, use } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,7 +22,7 @@ const Navbar = () => {
     <>
       <section
         className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
-          scrolled ? "bg-[#37517E]" : "bg-transparent backdrop-blur-sm"
+          scrolled || location.pathname === "/jobs" ? "bg-[#37517E]" : "bg-transparent backdrop-blur-sm"
         }`}
       >
         <nav className="max-w-[1200px] mx-auto flex justify-between items-center align-middle text-xs lg:text-base py-[20px] px-[4%] xl:px-0">
@@ -49,7 +50,7 @@ const Navbar = () => {
               <Link to="/jobs">Jobs</Link>
             </li>
             <li>
-              <Link to="/jobs">F.A.Q</Link>
+              <Link to="/faq">F.A.Q</Link>
             </li>
             <li className="items-center align-middle">
               <a href="#" className="flex flex-row gap-[15px]">
