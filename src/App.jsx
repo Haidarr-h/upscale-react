@@ -7,6 +7,7 @@ import Home from "./pages/HomePage";
 import ForBusiness from "./pages/ForBusiness";
 import ForTalent from "./pages/ForTalent";
 import Jobs from "./pages/Jobs";
+import Faq from "./pages/Faq";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,12 +18,10 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route
-          path="/for-business"
-          element={<ForBusiness></ForBusiness>}
-        ></Route>
+        <Route path="/for-business" element={<ForBusiness></ForBusiness>}></Route>
         <Route path="/for-talent" element={<ForTalent></ForTalent>}></Route>
         <Route path="/jobs" element={<Jobs></Jobs>}></Route>
+        <Route path="/faq" element={<Faq></Faq>}></Route>
       </Routes>
       <Footer></Footer>
       {/* // </Router> */}
