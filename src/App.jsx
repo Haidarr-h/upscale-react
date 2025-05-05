@@ -12,16 +12,21 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <Router>
+    <>
+      {/* // <Router> */}
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/for-business" element={<ForBusiness></ForBusiness>}></Route>
+        <Route
+          path="/for-business"
+          element={<ForBusiness></ForBusiness>}
+        ></Route>
         <Route path="/for-talent" element={<ForTalent></ForTalent>}></Route>
         <Route path="/jobs" element={<Jobs></Jobs>}></Route>
       </Routes>
       <Footer></Footer>
-    </Router>
+      {/* // </Router> */}
+    </>
   );
 }
 

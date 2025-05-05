@@ -201,3 +201,65 @@ p {
   @apply font-medium text-[16px] text-white rounded-full bg-[rgb(71,178,228)] px-2;
 }
 
+/* ! for talent pages */
+
+.content-talent-poin {
+  @apply flex flex-row font-jost text-white flex-1 gap-4;
+}
+
+.content-talent-poin div {
+  @apply space-y-4;
+}
+
+.content-talent-poin h3 {
+  @apply font-medium;
+}
+
+.content-talent-poin p {
+  @apply font-light;
+}
+
+.content-talent-poin svg {
+  @apply size-8 text-[rgb(71,178,228)];
+}
+
+.talent-community-content div h2 {
+  @apply font-medium text-3xl;
+}
+
+.talent-community-content div p {
+  @apply font-light ;
+}
+
+.talent-community-content div {
+  @apply space-y-8;
+}
+
+.blue-dot {
+  @apply inline-block w-2 h-2 bg-blue-500 rounded-full ml-2;
+}
+
+.for-talent-job-box {
+  @apply flex flex-row w-full justify-between;
+}
+
+.for-talent-job-box div {
+  @apply flex flex-row gap-4;
+}
+
+.for-talent-job-box svg {
+  @apply my-auto;
+}
+
+.for-talent-job-box div div {
+  @apply flex flex-col m-0 p-0;
+}
+
+.for-talent-job-box div div h3 {
+  @apply font-normal text-lg;
+}
+
+.for-talent-job-box div div p {
+  @apply font-light text-lg;
+}
+

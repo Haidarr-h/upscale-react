@@ -5,9 +5,9 @@ const Footer = () => {
         <div className="max-w-[1200px] mx-auto pt-[70px] pb-[50px] px-[4%] xl:px-0">
           <div className=" flex flex-col xl:flex-row gap-[50px] justify-between text-white">
             {/* !left */}
-            <div className="left-box-footer space-y-[35px]">
-              <img src="logofooter.png" alt="" className="w-[190px] h-[44px]" />
-              <div>
+            <div className="left-box-footer space-y-[15px] font-jost">
+              <img src="logofooter.png" alt="" className="max-w-[120px] h-auto" />
+              <div className="">
                 <img src="location_on.png" alt="" />
                 <p className="font-light">
                   Jln. Ringroad Utara No 34 Maguwoharjo Yogyakarta, Indonesia
