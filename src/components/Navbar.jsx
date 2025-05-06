@@ -1,9 +1,13 @@
+import { div } from "framer-motion/client";
 import React, { useState, useEffect, use } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleHideNavbar = () => setIsOpen(!isOpen);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +26,12 @@ const Navbar = () => {
     <>
       <section
         className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
-          scrolled || location.pathname === "/jobs" || location.pathname === "/faq" ? "bg-[#37517E]" : "bg-transparent backdrop-blur-sm"
+          scrolled ||
+          location.pathname === "/jobs" ||
+          location.pathname === "/faq" ||
+          isOpen
+            ? "bg-[#37517E]"
+            : "bg-transparent backdrop-blur-sm"
         }`}
       >
         <nav className="max-w-[1200px] mx-auto flex justify-between items-center align-middle text-xs lg:text-base py-[20px] px-[4%] xl:px-0">
@@ -36,7 +45,7 @@ const Navbar = () => {
           </div>
 
           {/* !* Menu */}
-          <ul className=" menus">
+          <ul className="menus">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -74,7 +83,7 @@ const Navbar = () => {
 
           {/* Mobile menu button (hamburger icon) */}
           <div className="lg:hidden">
-            <button>
+            <button onClick={toggleHideNavbar}>
               <svg
                 className="w-6 h-6 text-white"
                 fill="none"
@@ -90,6 +99,31 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
+
+          {/* if is open */}
+          {isOpen && (
+            <div className="absolute top-full left-0 bg-[#37517E] w-full text-center text-white flex flex-col gap-4 p-4 lg:hidden">
+              <Link to="/" onClick={() => setIsOpen(false)}>
+                Home
+              </Link>
+              <Link to="/for-business" onClick={() => setIsOpen(false)}>
+                For Business
+              </Link>
+              <Link to="/for-talent" onClick={() => setIsOpen(false)}>
+                For Talent
+              </Link>
+              <Link to="/jobs" onClick={() => setIsOpen(false)}>
+                Jobs
+              </Link>
+              <Link to="/faq" onClick={() => setIsOpen(false)}>
+                F.A.Q
+              </Link>
+              <button>Login</button>
+              <button className="border border-white rounded-full px-3 py-1">
+                Live Chat
+              </button>
+            </div>
+          )}
         </nav>
       </section>
     </>
