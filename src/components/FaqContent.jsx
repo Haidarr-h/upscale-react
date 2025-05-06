@@ -31,59 +31,74 @@ const FaqContent = () => {
     },
   ];
 
+  const faqTalent = [
+    {
+      pertanyaan: "Bagaimana cara mendaftar Upscale ?",
+      jawaban:
+        'Bisa klik tombol login / register di kanan atas website ini , atau klik ke halaman "for talent"',
+    },
+    {
+      pertanyaan: "Apa manfaat bergabung ke upscale?",
+      jawaban:
+        "Selain mendapatkan tawaran pekerjaan, anda dapat memperluas network kamu agar banyak peluang yang mungkin bisa anda dapatkan.",
+    },
+    {
+      pertanyaan: "Bagaimana status pekerja bagi talent yang mendapatkan pekerjaan?",
+      jawaban:
+        "Status pekerja ada beberapa macam, ada yang sebagai karyawan upscale, ada yang berstatus sebagai pegawai internal client kami. Tergantung kesepakatan dari client dan talent itu sendiri.",
+    },
+    {
+      pertanyaan: "Apakah saya bisa mendapatkan side project dari Upscale?",
+      jawaban:
+        "Ya, tentu saja. Meskipun anda saat ini sudah bekerja, namun kami bisa membantu anda mendapatkan pekerjaan sampingan. Namun pastikan tidak mengganggu pekerjaan ya.",
+    }
+  ];
+
   const [openIndex, setOpenIndex] = useState(null);
   const toggleFaq = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const [openIndex2, setOpenIndex2] = useState(null);
+  const toggleFaq2 = (index2) => {
+    setOpenIndex2(openIndex2 === index2 ? null : index2);
+  };
+
   return (
     <>
       <section className="bg-white">
-        <div className="container-main py-[100px]">
+        <div className="container-main py-[200px]">
           <div className="flex flex-row gap-3 font-jost">
-            <div className="flex flex-col">
-              <h3>Untuk Perusahaan / Pengusaha</h3>
-              <div>
+            <div className="flex flex-col flex-1">
+              <h3 className="font-medium mb-10 text-2xl">Untuk Perusahaan / Pengusaha</h3>
+              <div className="space-y-5">
                 {faqPengusaha.map((question, index) => (
                   <div key={index}>
                     <button
                       className="flex flex-row gap-2"
                       onClick={() => toggleFaq(index)}
                     >
-                      {openIndex === index ? (
+                      <motion.div
+                        animate={{ rotate: openIndex === index ? 90 : 0 }}
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          strokeWidth={1.5}
+                          strokeWidth={3}
                           stroke="currentColor"
-                          className="size-6 border"
+                          className="size-6 bg-[rgb(18,48,74)] text-white p-1 rounded-md"
                         >
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+                            d="m8.25 4.5 7.5 7.5-7.5 7.5"
                           />
                         </svg>
-                      ) : (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth={1.5}
-                          stroke="currentColor"
-                          className="size-6"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                          />
-                        </svg>
-                      )}
-                      <h3>{question.pertanyaan}</h3>
+                      </motion.div>
+                      <h3 className="text-left font-normal text-lg">{question.pertanyaan}</h3>
                     </button>
-                    <AnimatePresence initial={false}>
+                    <AnimatePresence initial={true}>
                       {openIndex === index && (
                         <motion.div
                           key="content"
@@ -93,7 +108,7 @@ const FaqContent = () => {
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden mt-2 text-gray-700"
                         >
-                          <p>{question.jawaban}</p>
+                          <p className="mt-3 mb-2 font-light">{question.jawaban}</p>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -102,7 +117,53 @@ const FaqContent = () => {
               </div>
             </div>
 
-            <div></div>
+            <div className="flex flex-col flex-1">
+              <h3 className="font-medium mb-10 text-2xl">Untuk Talent</h3>
+              <div className="space-y-5">
+                {faqTalent.map((question2, index2) => (
+                  <div key={index2}>
+                    <button
+                      className="flex flex-row gap-2"
+                      onClick={() => toggleFaq2(index2)}
+                    >
+                      <motion.div
+                        animate={{ rotate: openIndex2 === index2 ? 90 : 0 }}
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={3}
+                          stroke="currentColor"
+                          className="size-6 bg-[rgb(18,48,74)] text-white p-1 rounded-md"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                          />
+                        </svg>
+                      </motion.div>
+                      <h3 className="text-left font-normal text-lg">{question2.pertanyaan}</h3>
+                    </button>
+                    <AnimatePresence initial={true}>
+                      {openIndex2 === index2 && (
+                        <motion.div
+                          key="content"
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="overflow-hidden mt-2 text-gray-700"
+                        >
+                          <p className="mt-3 mb-2 font-light">{question2.jawaban}</p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
