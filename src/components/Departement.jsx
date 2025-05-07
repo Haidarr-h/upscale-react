@@ -3,8 +3,8 @@ import AnimatedCounter from "./AnimatedCounter";
 const Departement = () => {
   return (
     <>
-      <section className="w-full bg-gradient-to-r from-[#A3B8D6] via-[#4F73A8] to-[#37517E]">
-        <div className="max-w-[1200px] mx-auto px-[4%] xl:px-0 flex flex-col gap-[50px] text-center py-[50px] text-white">
+      <section className="w-full bg-[rgb(241,245,247)]">
+        <div className="max-w-[1200px] mx-auto px-[4%] xl:px-0 flex flex-col gap-[50px] text-center py-[50px] text-black">
           <h1 className="font-jost font-medium">
             Departemen apa yang Anda butuhkan saat ini?
           </h1>

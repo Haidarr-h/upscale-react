@@ -104,9 +104,9 @@ const Features = () => {
     <>
       <section className="relative z-30 w-full">
         <motion.div
-          initial={{ rotate: 45, scale: 0.5 }}
-          animate={{ rotate: 0, scale: 1 }}
-          transition={{ ease: "backOut", duration: 2 }}
+          initial={{ scale: 0.5 }}
+          animate={{ scale: 1 }}
+          transition={{ ease: "backOut", duration: 3 }}
           viewport={{ once: false }}
           className="max-w-[1200px] mx-auto relative -top-[80px]"
         >
