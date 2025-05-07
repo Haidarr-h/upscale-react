@@ -56,7 +56,7 @@ p {
 
 /* ! features */
 .features-box {
-  @apply border bg-[#E9EDF5] rounded-xl shadow-lg flex flex-col justify-between mx-auto items-center gap-[20px] text-center py-[20px] px-[20px] w-[300px] font-jost hover:scale-105;
+  @apply border bg-white rounded-md lg:h-[170px] shadow-lg flex flex-col justify-between mx-auto  py-[30px] px-[20px] w-full sm:w-[500px] lg:w-[290px] font-jost hover:scale-105 text-left ;
 }
 
 .features-box img {
@@ -68,11 +68,11 @@ p {
 }
 
 .features-box h4 {
-  @apply font-semibold text-[18px] lg:text-[20px] leading-[120%] tracking-normal;
+  @apply font-medium text-center lg:text-left text-[18px] lg:text-[20px] leading-[120%] tracking-normal;
 }
 
 .features-box p {
-  @apply font-normal text-[16px] lg:text-[18px] leading-[140%] tracking-normal;
+  @apply font-light text-center lg:text-left text-[16px] lg:text-[18px] leading-[140%] tracking-normal;
 }
 
 /* ! detail di konten section 1 */

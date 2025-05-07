@@ -108,20 +108,18 @@ const Features = () => {
           animate={{ scale: 1 }}
           transition={{ ease: "backOut", duration: 3 }}
           viewport={{ once: false }}
-          className="max-w-[1200px] mx-auto relative -top-[80px]"
+          className="container-main mx-auto relative py-[50px] lg:py-0 lg:-top-[80px]"
         >
-          <ul className="flex flex-col xl:flex-row gap-[25px]">
+          <ul className="flex flex-col lg:flex-row gap-5 lg:gap-1 xl:gap-[25px]">
             {features.map((feature) => (
               <li
                 key={feature.id}
                 className="features-box cursor-pointer"
                 onClick={() => setActiveFeature(feature)}
               >
-                <div className="bg-[rgb(206,216,233)] p-2 rounded-full">{feature.icon}</div>
-                <div>
-                  <h4>{feature.title}</h4>
-                  <p>{feature.desc}</p>
-                </div>
+                {/* <div className="bg-[rgb(206,216,233)] p-2 rounded-full">{feature.icon}</div> */}
+                <h4 className="text-left">{feature.title}</h4>
+                <p>{feature.desc}</p>
               </li>
             ))}
           </ul>
@@ -130,7 +128,7 @@ const Features = () => {
         {/* Modal */}
         {activeFeature && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-40">
-            <div className="bg-white rounded-xl p-8 max-w-md mx-auto relative">
+            <div className="bg-white rounded-xl p-8 max-w-sm lg:max-w-md mx-auto relative">
               <button
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
                 onClick={() => setActiveFeature(null)}

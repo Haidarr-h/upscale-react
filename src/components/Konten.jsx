@@ -84,6 +84,19 @@ const Konten = () => {
               yang kami tawarkan adalah talent yang memiliki kualifikasi sesuai
               dengan kebutuhan.
             </p>
+
+            <div className="space-y-4">
+              <h3 className="font-normal">Perkiraan waktu untuk konsultasi</h3>
+              <div className="flex flex-row space-x-3">
+                <AnimatedCounter
+                  className="font-jost text-5xl font-semibold"
+                  from={0}
+                  to={30}
+                  duration={3}
+                ></AnimatedCounter>
+                <h3 className="mt-auto text-[rgb(71,178,228)]">Menit</h3>
+              </div>
+            </div>
           </div>
 
           {/* kanan */}
@@ -174,7 +187,15 @@ const Konten = () => {
               seputar managemen seperti timeline, finance, KPI building, dll.
             </p>
             <h3 className="font-jost font-medium">Estimated Talent Matching</h3>
-            <h5 className="font-jost font-medium text-[30px]"> <AnimatedCounter from={0} to={14} duration={4}></AnimatedCounter> days</h5>
+            <h5 className="font-jost font-medium text-[30px]">
+              {" "}
+              <AnimatedCounter
+                from={0}
+                to={14}
+                duration={4}
+              ></AnimatedCounter>{" "}
+              days
+            </h5>
           </div>
 
           {/* kanan */}
