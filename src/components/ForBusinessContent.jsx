@@ -49,16 +49,16 @@ const ForBusinessContent = () => {
   return (
     <>
       {/* ! konten 1 mini hero */}
-      <section className="bg-[url('https://upscale.id/template/upscale/media/video-poster-2.jpg')] bg-cover">
-        <div className="max-w-[1200px] mx-auto px-[4%] xl:px-0 py-[200px]">
-          <div className="text-white w-1/2 flex flex-col gap-[30px] text-[24px]">
-            <h1 className="font-medium text-[48px]">
+      <section className="bg-[url('https://upscale.id/template/upscale/media/video-poster-2.jpg')] bg-center bg-cover">
+        <div className="max-w-[1200px] mx-auto px-[4%] xl:px-0 py-[100px] lg:py-[200px]">
+          <div className="text-white lg:w-1/2 flex flex-col gap-[30px] text-[24px]">
+            <h1 className="font-medium text-[32px] lg:text-[48px]">
               Scaling Up Your Business
             </h1>
             <h2 className="font-normal">
               Service kami cocok untuk membantu berbagai skala perusahaan
             </h2>
-            <ul>
+            <ul className="list-disc ml-6 text-[24px] lg:text-[32px]">
               <li>Enterprise Corporation</li>
               <li>Startup Company</li>
               <li>E-commerce</li>
@@ -71,8 +71,8 @@ const ForBusinessContent = () => {
       <section className="bg-[rgb(241,245,247)]">
         <div className="max-w-[1200px] mx-auto px-[4%] xl:px-0 py-[100px]">
           <div className="space-y-[100px]">
-            <div className="flex flex-row justify-between">
-              <div className="flex flex-row w-1/2 gap-[30px] font-jost">
+            <div className="flex flex-col lg:flex-row justify-between">
+              <div className="flex flex-col lg:flex-row lg:w-1/2 gap-[30px] font-jost">
                 <p className="font-light font-jost">
                   Dapatkan akses database talent kami untuk membantu scaling up
                   perusaahaan anda dengan cara yang flexible. Hal ini sangat
@@ -88,12 +88,12 @@ const ForBusinessContent = () => {
                   anda
                 </p>
               </div>
-              <div className="relative w-1/2 mx-auto">
+              <div className="mt-10 lg:mt-0 lg:relative lg:w-1/2 mx-auto grid grid-cols-2 gap-4">
                 {images.map((image, index) => (
                   <motion.img
                     key={index}
                     src={image.src}
-                    className={`absolute rounded-lg cursor-pointer shadow-lg ${image.style}`}
+                    className={`lg:absolute rounded-lg cursor-pointer shadow-lg lg:${image.style}`}
                     whileHover={{ scale: 1.05, rotate: 1 }}
                     transition={{ duration: 0.3 }}
                   />
@@ -101,7 +101,7 @@ const ForBusinessContent = () => {
               </div>
             </div>
 
-            <div className="flex flex-row justify-between items-center">
+            <div className="flex lg:mt-0 flex-col lg:flex-row justify-between items-center">
               {partnerImages.map((logo, index) => (
                 <motion.img
                   key={index}
@@ -119,7 +119,7 @@ const ForBusinessContent = () => {
 
       <section className="bg-white">
         <div className="max-w-[1200px] mx-auto px-[4%] xl:px-0 py-[100px]">
-          <div className="flex flex-row gap-[20px] justify-between">
+          <div className="flex flex-col lg:flex-row gap-[20px] justify-between">
             <div className="forBusiness-card">
               <img
                 src="https://upscale.id/template/upscale/media/music/image-16.jpg"
@@ -186,8 +186,8 @@ const ForBusinessContent = () => {
               </p>
             </div>
 
-            <div className="w-full rounded-lg bg-white shadow-lg flex flex-row gap-[30px] p-10 font-jost">
-              <div className="w-1/3 space-y-5 font-light opacity-80">
+            <div className="w-full rounded-lg bg-white shadow-lg flex flex-col lg:flex-row gap-[30px] p-10 font-jost">
+              <div className="lg:w-1/3 space-y-5 font-light opacity-80">
                 <h1 className="font-medium">
                   Ingin Konsultasi Kebutuhan Anda?
                 </h1>
@@ -217,14 +217,14 @@ const ForBusinessContent = () => {
               </div>
 
               {/* kanan */}
-              <form action={"#"} className="w-2/3 flex flex-col gap-8">
+              <form action={"#"} className="lg:w-2/3 flex flex-col gap-8">
                 <input
                   type="text"
                   className="border rounded-md p-2"
                   placeholder="Name"
                   required
                 />
-                <div className="flex flex-row gap-5">
+                <div className="flex flex-col lg:flex-row gap-5">
                   <input
                     type="number"
                     className="border rounded-md p-2 w-full"
@@ -247,7 +247,7 @@ const ForBusinessContent = () => {
 
                 <input
                   type="submit"
-                  className="text-center bg-[rgb(71,178,228)] rounded-full text-white hover:text-black w-1/4 p-2 transition-all duration-700 font-medium"
+                  className="text-center bg-[rgb(71,178,228)] rounded-full text-white hover:text-black w-full lg:w-1/4 p-2 transition-all duration-700 font-medium"
                   value="Send inquiry"
                 />
               </form>
