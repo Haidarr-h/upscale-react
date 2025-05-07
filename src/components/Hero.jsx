@@ -66,7 +66,7 @@ const Hero = () => {
                   <span className="text-[rgb(71,178,228)] text-5xl"> .</span>
                 </h1>
                 <p className="">
-                  <span className="">
+                  <span className="text-[25px] font-normal font-jost">
                     Hire software developers, designers, product manager,
                     finance, atau administratif team dari eksklusif network
                     kami. Talent kami bisa bekerja secara remote maupun on-site.
@@ -79,11 +79,11 @@ const Hero = () => {
               </div>
 
               <div className="w-1/2 flex">
-                <div className="mx-auto space-x-5">
-                  <button className=" bg-[rgb(71,178,228)] shadow-2xl rounded-full px-4 py-2 hover:bg-[#6f8db9]">
+                <div className="mx-auto space-x-5 text-xl">
+                  <button className=" bg-[rgb(71,178,228)] shadow-2xl rounded-full px-6 py-3 hover:bg-[#6f8db9]">
                     Request Quotation
                   </button>
-                  <button className="border bg-transparent shadow-2xl rounded-full px-4 py-2 hover:bg-[rgb(71,178,228)]">
+                  <button className="border bg-transparent shadow-2xl rounded-full px-8 py-3 hover:bg-[rgb(71,178,228)]">
                     Join As Talent
                   </button>
                 </div>

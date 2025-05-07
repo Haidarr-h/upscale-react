@@ -1,6 +1,6 @@
-import { div } from "framer-motion/client";
 import React, { useState, useEffect, use } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -61,25 +61,29 @@ const Navbar = () => {
             <li>
               <Link to="/faq">F.A.Q</Link>
             </li>
-            <li className="items-center align-middle">
-              <a href="#" className="flex flex-row gap-[15px]">
+            <div className="relative group cursor-pointer items-center align-middle">
+              <div className="flex flex-row gap-[15px]">
                 <img
                   src="https://upscale.id/template/upscale/media/id.png"
                   alt="indonesia"
                   className="w-[18px] h-[12px] my-auto"
                 />
                 ID
-              </a>
-            </li>
-          </ul>
+              </div>
 
-          {/* right side menus */}
-          <div className="menus gap-[30px]">
-            <button>Login</button>
-            <button className="border backdrop-blur-lg border-white text-white bg-transparent rounded-full px-3 py-1">
-              Live Chat
-            </button>
-          </div>
+              {/* drop down */}
+              <div className="absolute rounded-md mt-3  bg-white text-black shadow-md opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-1 transition-all duration-500 z-30 space-y-3 w-[90px] h-[100px] items-center flex flex-col justify-center">
+                <a className="flex hover:text-[rgb(71,178,228)]"><img src="https://upscale.id/template/upscale/media/id.png" className="object-contain" alt="" /> ID</a>
+                <a className="flex hover:text-[rgb(71,178,228)]"><img src="https://upscale.id/template/upscale/media/en.png" className="object-contain" alt="" /> EN</a>
+              </div>
+            </div>
+            <div className="space-x-8">
+              <button className="pl-6 border-l">Login</button>
+              <button className="border backdrop-blur-lg border-white text-white bg-transparent rounded-full px-3 py-1 hover:bg-[rgb(71,178,228)]  hover:transition-all hover:duration-700">
+                Live Chat
+              </button>
+            </div>
+          </ul>
 
           {/* Mobile menu button (hamburger icon) */}
           <div className="lg:hidden">
