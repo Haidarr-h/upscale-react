@@ -142,11 +142,11 @@ p {
 }
 
 .left-box-footer div {
-  @apply flex flex-row gap-3 align-middle items-center;
+  @apply flex flex-col md:flex-row gap-3 align-middle text-base;
 }
 
 .left-box-footer div p {
-  @apply font-jost font-light;
+  @apply font-jost font-light text-base;
 }
 
 /* ! for business */
