@@ -100,15 +100,16 @@ const Konten = () => {
           </div>
 
           {/* kanan */}
-          <div className="flex flex-col gap-[30px] xl:w-1/2">
+          <div className="flex flex-col  xl:w-1/2">
             {/* per kotak poin */}
             <div className="konten-3-kotak-poin">
               {/* ! kiri (nomor) */}
-              <div>
-                <h1>1</h1>
+              <div className="">
+                <h1 className="text-left">1</h1>
+                <div className="w-px bg-gray-500 flex-1 h-full"></div>
               </div>
               {/* kanan penjelasan */}
-              <div>
+              <div className="text-left">
                 <h3 className="font-jost">
                   Konsultasikan kebutuhan bisnis Anda
                 </h3>
@@ -124,6 +125,7 @@ const Konten = () => {
               {/* ! kiri (nomor) */}
               <div>
                 <h1>2</h1>
+                <div className="w-px bg-gray-500 flex-1 h-full"></div>
               </div>
               {/* kanan penjelasan */}
               <div>
@@ -140,6 +142,7 @@ const Konten = () => {
               {/* ! kiri (nomor) */}
               <div>
                 <h1>3</h1>
+                <div className="w-px bg-gray-500 flex-1 h-full"></div>
               </div>
               {/* kanan penjelasan */}
               <div>
@@ -199,12 +202,13 @@ const Konten = () => {
           </div>
 
           {/* kanan */}
-          <div className="flex flex-col gap-[30px] xl:w-1/2">
+          <div className="flex flex-col xl:w-1/2">
             {/* per kotak poin */}
             <div className="konten-3-kotak-poin">
               {/* ! kiri (nomor) */}
               <div>
                 <h1>4</h1>
+                <div className="w-px bg-gray-500 flex-1 h-full"></div>
               </div>
               {/* kanan penjelasan */}
               <div>
@@ -221,6 +225,7 @@ const Konten = () => {
               {/* ! kiri (nomor) */}
               <div>
                 <h1>5</h1>
+                <div className="w-px bg-gray-500 flex-1 h-full"></div>
               </div>
               {/* kanan penjelasan */}
               <div>
@@ -234,6 +239,7 @@ const Konten = () => {
               {/* ! kiri (nomor) */}
               <div>
                 <h1>6</h1>
+                <div className="w-px bg-gray-500 flex-1 h-full"></div>
               </div>
               {/* kanan penjelasan */}
               <div>

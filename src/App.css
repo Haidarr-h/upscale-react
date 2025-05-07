@@ -107,16 +107,20 @@ p {
   @apply flex flex-row gap-[30px];
 }
 
+.konten-3-kotak-poin div {
+  @apply flex flex-col items-center;
+}
+
 .konten-3-kotak-poin h1 {
-  @apply border rounded-full shadow-lg w-12 h-12 flex items-center justify-center bg-gradient-to-r from-[#A3B8D6] via-[#4F73A8] to-[#37517E] text-white text-[20px];
+  @apply border rounded-full shadow-lg w-12 h-12 flex items-center justify-center bg-white text-black text-[20px];
 }
 
 .konten-3-kotak-poin h3 {
-  @apply text-[26px] font-medium font-jost;
+  @apply text-[26px] self-start text-left font-medium font-jost;
 }
 
 .konten-3-kotak-poin p {
-  @apply text-[20px] font-light;
+  @apply text-[20px] font-light mb-8;
 }
 
 /* !konten 6: recruitment type */
