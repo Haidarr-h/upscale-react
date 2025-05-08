@@ -222,7 +222,7 @@ p {
 }
 
 .content-talent-poin svg {
-  @apply size-8 text-[rgb(71,178,228)];
+  @apply max-w-[40px] mb-auto text-[rgb(71,178,228)];
 }
 
 .talent-community-content div h2 {
@@ -237,12 +237,16 @@ p {
   @apply space-y-8;
 }
 
+.konten-regional li {
+  @apply flex flex-row justify-between lg:block lg:text-right;
+}
+
 .blue-dot {
-  @apply inline-block w-2 h-2 bg-blue-500 rounded-full ml-2;
+  @apply inline-block w-2 h-2 bg-blue-500 rounded-full ml-2 my-auto;
 }
 
 .for-talent-job-box {
-  @apply flex flex-row w-full justify-between;
+  @apply flex flex-col gap-3 lg:flex-row w-full justify-between;
 }
 
 .for-talent-job-box div {
@@ -254,7 +258,7 @@ p {
 }
 
 .for-talent-job-box div div {
-  @apply flex flex-col m-0 p-0;
+  @apply flex flex-col m-0 p-0 gap-0;
 }
 
 .for-talent-job-box div div h3 {

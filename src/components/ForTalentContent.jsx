@@ -6,19 +6,19 @@ const ForTalentContent = () => {
   const images = [
     {
       src: "https://upscale.id/template/upscale/media/music/image-15.jpg?v=2",
-      style: "top-0 left-0 w-[247px] h-auto z-10",
+      style: "lg:top-0 lg:left-0 lg:w-[247px] lg:h-auto lg:z-10",
     },
     {
       src: "https://upscale.id/template/upscale/media/music/image-1.jpg?v=2",
-      style: "top-10 left-24 w-48 z-20",
+      style: "lg:top-10 lg:left-24 lg:w-48 lg:z-20",
     },
     {
       src: "https://upscale.id/template/upscale/media/music/image-11.jpg?v=2",
-      style: "top-16 left-48 w-44 z-30",
+      style: "lg:top-16 lg:left-48 lg:w-44 lg:z-30",
     },
     {
       src: "https://upscale.id/template/upscale/media/music/image-5.jpg?v=2",
-      style: "top-0 left-72 w-52 z-40",
+      style: "lg:top-0 lg:left-72 lg:w-52 lg:z-40",
     },
   ];
 
@@ -60,13 +60,15 @@ const ForTalentContent = () => {
 
   return (
     <>
-      <section className="bg-[url('https://upscale.id/template/upscale/media/video-poster-2.jpg')] bg-cover">
-        <div className="container-main py-[200px]">
-          <div className="flex flex-row justify-between text-white">
-            <div className="space-y-5 w-1/2">
-              <h1 className="text-[52px]">Upgrade kemampuan dan networkmu.</h1>
+      <section className="bg-[url('https://upscale.id/template/upscale/media/video-poster-2.jpg')] bg-center bg-cover">
+        <div className="container-main lg:py-[200px] py-[100px]">
+          <div className="flex flex-col text-left lg:flex-row gap-10 lg:gap-0 justify-between text-white">
+            <div className="space-y-5 lg:w-1/2">
+              <h1 className="text-[30px] font-medium lg:text-[52px]">
+                Upgrade kemampuan dan networkmu.
+              </h1>
               <p>Bergabung dan dapatkan beberapa manfaat:</p>
-              <ul className="list-disc ml-6">
+              <ul className="list-disc ml-8 text-left">
                 <li>Karir di perusahaan idaman</li>
                 <li>Project as a freelance</li>
                 <li>Pasif Income</li>
@@ -78,7 +80,7 @@ const ForTalentContent = () => {
 
             <div className="my-auto">
               <button
-                className="bg-transparent rounded-full border border-white text-white p-3 text-[20px] 
+                className="w-full bg-transparent rounded-full border border-white text-white p-1 text-[16px] lg:text-[20px] 
                 hover:bg-[rgb(71,178,228)] transition-all duration-700"
               >
                 Join Community
@@ -90,7 +92,7 @@ const ForTalentContent = () => {
 
       <section className="bg-[#37517e] bg-cover">
         <div className="container-main py-[100px]">
-          <div className="flex flex-row gap-5 justify-between">
+          <div className="flex flex-col lg:flex-row gap-3 lg:gap-5 justify-between">
             <div className="content-talent-poin">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +141,7 @@ const ForTalentContent = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="size-6"
+                className=""
               >
                 <path
                   strokeLinecap="round"
@@ -164,8 +166,8 @@ const ForTalentContent = () => {
       <section className="bg-[rgb(241,245,247)]">
         <div className="container-main py-[100px]">
           <div className="flex flex-col gap-[100px] font-jost">
-            <div className="flex flex-row ">
-              <div className="w-1/2 space-y-8">
+            <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row ">
+              <div className="lg:w-1/2 space-y-8">
                 <h1 className="font-semibold text-5xl">Join Our Community</h1>
                 <p className="font-light">
                   Visi kami adalah membangun ecosystem yang dapat mendukung
@@ -173,25 +175,25 @@ const ForTalentContent = () => {
                   komunitas dan semua pihak lain yang dapat mendukung visi kami.
                   Ayo bergabung untuk meningkatkan kualitas industri indonesia
                 </p>
-                <button className="border px-5 py-3 rounded-full border-[rgb(71,178,228)] text-[rgb(71,178,228)] hover:scale-105 hover:bg-[rgb(71,178,228)] hover:text-white transition-all duration-500">
+                <button className="border lg:px-5 lg:py-3 p-1 rounded-full border-[rgb(71,178,228)] text-[rgb(71,178,228)] hover:scale-105 hover:bg-[rgb(71,178,228)] hover:text-white transition-all duration-500 w-full lg:w-auto">
                   Join Community
                 </button>
               </div>
 
-              <div className="w-1/2">
-                <div className="relative w-[500px] h-auto mx-auto">
+              <div className="lg:w-1/2 mx-auto">
+                <div className="lg:relative lg:w-[500px] lg:h-auto mx-auto grid grid-cols-2 gap-5">
                   {images.map((image, index) => (
                     <motion.img
                       key={index}
                       src={image.src}
-                      className={`absolute rounded-lg cursor-pointer shadow-lg ${image.style}`}
+                      className={`lg:absolute rounded-lg w-[150px] h-auto object-contain cursor-pointer shadow-lg ${image.style}`}
                       whileHover={{ scale: 1.2 }}
                     />
                   ))}
                 </div>
               </div>
             </div>
-            <div className="flex flex-row gap-5 talent-community-content">
+            <div className="flex lg:flex-row flex-col gap-5 talent-community-content">
               <div>
                 <h2>Share & Learn</h2>
                 <p>
@@ -232,13 +234,13 @@ const ForTalentContent = () => {
               </p>
             </div>
 
-            <div className="flex flex-row justify-between px-2">
+            <div className="flex flex-col lg:flex-row justify-between px-2">
               <img
                 src="https://upscale.id/template/upscale/media/map.jpg"
                 alt=""
                 className="max-w-[802px] h-auto object-contain"
               />
-              <ul className="my-auto text-right font-jost font-light space-y-2">
+              <ul className="my-auto font-jost font-light space-y-2 konten-regional">
                 <li>
                   Yogyakarta, Indonesia <span className="blue-dot"></span>
                 </li>
@@ -276,25 +278,38 @@ const ForTalentContent = () => {
       </section>
 
       <section className="bg-white">
-        <div className="container-main py-[100px]">
+        <div className="container-main py-[25px] lg:py-[100px]">
           <div className="font-jost">
             <div>
-              <h1 className="text-center font-medium mb-10">Currently open roles urgently.</h1>
+              <h1 className="text-center font-medium mb-10">
+                Currently open roles urgently.
+              </h1>
             </div>
             <div>
               {jobs.map((jobs, index) => (
                 <div key={index} className="p-6">
                   <h2 className="font-medium mb-3">{jobs.title}</h2>
-                  <div className="flex flex-row gap-10 justify-between">
+                  <div className="flex flex-col lg:flex-row gap-10 justify-between">
                     {/* kiri */}
                     <div className="flex flex-col gap-5">
                       {/* atas */}
-                      <div className="flex flex-row gap-3">
-                        <p className="font-light w-[600px]">{jobs.description}</p>
+                      <div className="flex flex-col lg:flex-row gap-3">
+                        <p className="font-light lg:w-[600px]">
+                          {jobs.description}
+                        </p>
                         <ul className="font-light ">
-                          <li><span className="blue-dot mr-2"></span>{jobs.type}</li>
-                          <li><span className="blue-dot mr-2"></span>{jobs.location}</li>
-                          <li><span className="blue-dot mr-2"></span>{jobs.contract}</li>
+                          <li>
+                            <span className="blue-dot mr-2"></span>
+                            {jobs.type}
+                          </li>
+                          <li>
+                            <span className="blue-dot mr-2"></span>
+                            {jobs.location}
+                          </li>
+                          <li>
+                            <span className="blue-dot mr-2"></span>
+                            {jobs.contract}
+                          </li>
                         </ul>
                       </div>
                       {/* bawah */}
@@ -314,11 +329,13 @@ const ForTalentContent = () => {
                               d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
                             />
                           </svg>
-                          <div className="flex flex-col">
+                          <div>
                             <h3>Availability</h3>
                             <p>{jobs.availability}</p>
                           </div>
                         </div>
+                        <hr />
+                        
 
                         <div className="">
                           <svg
@@ -341,6 +358,8 @@ const ForTalentContent = () => {
                             <p>{jobs.experience}</p>
                           </div>
                         </div>
+
+                        <hr />
 
                         <div className="">
                           <svg
@@ -366,8 +385,10 @@ const ForTalentContent = () => {
                       </div>
                     </div>
                     {/* kanan */}
-                    <div className="w-1/4 space-y-4">
-                      <button className="border bg-[rgb(71,178,228)] text-white p-3 rounded-full w-full">Apply Now</button>
+                    <div className="lg:w-1/4 w-full space-y-4">
+                      <button className="border bg-[rgb(71,178,228)] text-white p-1 lg:p-3 rounded-full w-full">
+                        Apply Now
+                      </button>
                       <p className="font-light text-sm">
                         Make sure to have all the requirements before contacting
                         us!
