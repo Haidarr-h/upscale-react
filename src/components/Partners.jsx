@@ -32,7 +32,7 @@ const Partners = () => {
             ref={ref}
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5  }}
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-[20px] items-center justify-items-center"
           >
             {mediaPartners.map((logo, index) => (

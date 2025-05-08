@@ -91,7 +91,7 @@ p {
 
 /* ! konten 2: departemen */
 .konten2-box div {
-  @apply flex flex-col gap-[10px];
+  @apply flex flex-col justify-between flex-1 gap-[10px];
 }
 
 .konten2-box div h5 {

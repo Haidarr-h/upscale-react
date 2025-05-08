@@ -7,7 +7,7 @@ const Hero = () => {
     <>
       {/* All areas */}
       <section className="relative w-full h-auto overflow-hidden">
-        {[3].map((i) => (
+        {/* {[3].map((i) => (
           <motion.div
             key={i}
             initial={{ x: 100 }}
@@ -19,7 +19,7 @@ const Hero = () => {
             className="fixed top-0 bottom-0 w-1/4 bg-white z-[999]"
             style={{ left: `${i * 25}%` }}
           />
-        ))}
+        ))} */}
 
         {/* <motion.div
           initial={{ width: "50%", left: "50%" }}
@@ -50,7 +50,7 @@ const Hero = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
+              transition={{ duration: 0.5 }}
               className="mx-auto flex flex-col lg:flex-row items-center  text-white gap-[48px]"
             >
               <div className="lg:w-1/2 space-y-5">

@@ -106,7 +106,7 @@ const Features = () => {
         <motion.div
           initial={{ scale: 0.5 }}
           animate={{ scale: 1 }}
-          transition={{ ease: "backOut", duration: 3 }}
+          transition={{ ease: "backOut", duration: 0.5  }}
           viewport={{ once: false }}
           className="container-main mx-auto relative py-[50px] lg:py-0 lg:-top-[80px]"
         >

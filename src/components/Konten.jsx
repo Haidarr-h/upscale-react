@@ -11,7 +11,7 @@ const Konten = () => {
           <motion.div
             initial={{ y: -100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: false }}
           >
             <h1 className="text-[#293751] opacity-0 animate-slide-up animation-delay-700 font-jost font-semibold">
@@ -30,14 +30,14 @@ const Konten = () => {
             alt=""
             initial={{ scale: 0.2, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: false }}
           />
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             viewport={{ once: false }}
             className="flex flex-col xl:flex-row gap-[30px] detail"
           >
@@ -73,7 +73,12 @@ const Konten = () => {
       <section className="w-full bg-white">
         <div className="max-w-[1200px] xl:px-0 mx-auto px-[4%] flex flex-col xl:flex-row gap-[70px] py-[60px]">
           {/* kiri */}
-          <div className="flex flex-col gap-[30px] xl:w-1/2">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col gap-[30px] xl:w-1/2"
+          >
             <h1 className="font-jost font-medium">
               Bagaimana prosedur kami ? Kami bekerja sesuai dengan kebutuhan
               bisnis Anda
@@ -92,15 +97,15 @@ const Konten = () => {
                   className="font-jost text-5xl font-semibold"
                   from={0}
                   to={30}
-                  duration={3}
+                  duration={2}
                 ></AnimatedCounter>
                 <h3 className="mt-auto text-[rgb(71,178,228)]">Menit</h3>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* kanan */}
-          <div className="flex flex-col  xl:w-1/2">
+          <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} className="flex flex-col  xl:w-1/2">
             {/* per kotak poin */}
             <div className="konten-3-kotak-poin">
               {/* ! kiri (nomor) */}
@@ -153,7 +158,7 @@ const Konten = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -179,7 +184,7 @@ const Konten = () => {
       <section className="w-full bg-[rgb(241,245,247)]">
         <div className="max-w-[1200px] xl:px-0 mx-auto px-[4%] flex xl:flex-row flex-col gap-[70px] py-[60px]">
           {/* kiri */}
-          <div className="flex flex-col gap-[30px] xl:w-1/2 text-center xl:text-left">
+          <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} className="flex flex-col gap-[30px] xl:w-1/2 text-center xl:text-left">
             <h1 className="font-jost font-medium">
               Setelah Anda mendapatkan talent terbaik, Kami tetap mensupport
               kebutuhan bisnis Anda
@@ -199,10 +204,10 @@ const Konten = () => {
               ></AnimatedCounter>{" "}
               days
             </h5>
-          </div>
+          </motion.div>
 
           {/* kanan */}
-          <div className="flex flex-col xl:w-1/2">
+          <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} className="flex flex-col xl:w-1/2">
             {/* per kotak poin */}
             <div className="konten-3-kotak-poin">
               {/* ! kiri (nomor) */}
@@ -250,7 +255,7 @@ const Konten = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
