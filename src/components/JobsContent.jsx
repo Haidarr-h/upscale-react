@@ -1,4 +1,34 @@
+import { div } from "framer-motion/client";
+
 const JobContent = () => {
+  const jobs_posted = [
+    {
+      title: "3. Backend Engineer (GO)",
+      description: "Min 1 Year - Fulltime/Partime, Remote/Onsite",
+      condition: "urgent",
+    },
+    {
+      title: "Fullstack Programmer",
+      description: "Yogyakarta - Min 2 Years - Fulltime/Partime, Remote/Onsite",
+      condition: "urgent",
+    },
+    {
+      title: "IT Product Manager",
+      description: "Yogyakarta - Min 2 Years - Fulltime/Partime, Remote/Onsite",
+      condition: "urgent",
+    },
+    {
+      title: "QA Engineer",
+      description: "Yogyakarta - Min 2 Years - Fulltime/Partime, Remote/Onsite",
+      condition: "urgent",
+    },
+    {
+      title: "UI/UX Designer",
+      description: "Yogyakarta - Min 2 Years - Fulltime/Partime, Remote/Onsite",
+      condition: "urgent",
+    },
+  ];
+
   return (
     <>
       <section className="bg-white min-h-[500px]">
@@ -15,59 +45,23 @@ const JobContent = () => {
               </p>
             </div>
             <div className="job-box">
-              {/* persatuan */}
-              <div>
-                <h3>3. Backend Engineer (GO)</h3>
+              {jobs_posted.map((job, index) => (
                 <div>
-                  <p>Min 1 Year - Fulltime/Partime, Remote/Onsite</p>
-                  <button>urgent</button>
+                  <div>
+                    <h3>{job.title}</h3>
+                    <div>
+                      <p>
+                        {job.description}{" "}
+                        <button className="cursor-default">
+                          {job.condition}
+                        </button>
+                      </p>
+                    </div>
+                  </div>
+                  <button>Join</button>
+                  <hr className="sm:hidden"/>
                 </div>
-                <button>Join</button>
-              </div>
-              {/* persatuan */}
-              <div>
-                <h3>Fullstack Programmer</h3>
-                <div>
-                  <p>
-                    Yogyakarta - Min 2 Years - Fulltime/Partime, Remote/Onsite
-                  </p>
-                  <button>urgent</button>
-                </div>
-                <button>Join</button>
-              </div>
-              {/* persatuan */}
-              <div>
-                <h3>IT Product Manager</h3>
-                <div>
-                  <p>
-                    Yogyakarta - Min 2 Years - Fulltime/Partime, Remote/Onsite
-                  </p>
-                  <button>urgent</button>
-                </div>
-                <button>Join</button>
-              </div>
-              {/* persatuan */}
-              <div>
-                <h3>QA Engineer</h3>
-                <div>
-                  <p>
-                    Yogyakarta - Min 2 Years - Fulltime/Partime, Remote/Onsite
-                  </p>
-                  <button>urgent</button>
-                </div>
-                <button>Join</button>
-              </div>
-              {/* persatuan */}
-              <div>
-                <h3>UI/UX Designer</h3>
-                <div>
-                  <p>
-                    Yogyakarta - Min 2 Years - Fulltime/Partime, Remote/Onsite
-                  </p>
-                  <button>urgent</button>
-                </div>
-                <button>Join</button>
-              </div>
+              ))}
             </div>
           </div>
         </div>
