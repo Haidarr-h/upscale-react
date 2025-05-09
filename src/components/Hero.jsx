@@ -45,7 +45,7 @@ const Hero = () => {
         />
 
         {/* hero section (title etc) */}
-        <div className="relative z-30 max-w-[1200px] mx-auto px-[4%] xl:px-0 py-[150px] lg:py-[200px]">
+        <div className="relative z-30 container-main py-[150px] lg:py-[200px]">
           <div className="mx-auto items-center text-white">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -55,18 +55,18 @@ const Hero = () => {
             >
               <div className="lg:w-1/2 space-y-5">
                 <h1 className="text-left">
-                  <span className="font-semibold text-[30px] lg:text-[45px]">Hire Talent On-Demand</span>
+                  <span className="font-semibold text-[30px] lg:text-[35px]">Hire Talent On-Demand</span>
                   <span className="font-semibold text-[rgb(71,178,228)] text-5xl"> .</span>
                 </h1>
                 <h1 className="">
-                  <span className="text-[25px] lg:text-[35px]">
+                  <span className="text-[25px] font-normal lg:text-[30px]">
                     Kami membantu meng-handle semua urusan "talent", agar anda
                     dapat fokus pada pengembangan bisnis
                   </span>
                   <span className="text-[rgb(71,178,228)] text-5xl"> .</span>
                 </h1>
                 <p className="">
-                  <span className="text-[20px] lg:text-[25px] font-normal font-jost">
+                  <span className="text-[18px] lg:text-[20px] font-normal font-jost">
                     Hire software developers, designers, product manager,
                     finance, atau administratif team dari eksklusif network
                     kami. Talent kami bisa bekerja secara remote maupun on-site.
@@ -80,10 +80,10 @@ const Hero = () => {
 
               <div className="w-full lg:w-1/2 flex ">
                 <div className="w-full mx-auto gap-5 text-xl flex flex-col lg:flex-row">
-                  <button className=" bg-[rgb(71,178,228)] shadow-2xl rounded-full w-full py-2 lg:py-3 hover:bg-[#6f8db9]">
+                  <button className=" bg-[rgb(71,178,228)] shadow-2xl rounded-full text-[16px] w-full lg:w-[200px]  p-1 hover:bg-[#6f8db9]">
                     Request Quotation
                   </button>
-                  <button className="border bg-transparent shadow-2xl rounded-full w-full py-2 lg:py-3 hover:bg-[rgb(71,178,228)]">
+                  <button className="border bg-transparent shadow-2xl rounded-full text-[16px] w-full lg:w-[200px] p-1 hover:bg-[rgb(71,178,228)]">
                     Join As Talent
                   </button>
                 </div>
