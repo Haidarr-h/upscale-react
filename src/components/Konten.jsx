@@ -1,9 +1,9 @@
 import Departement from "./Departement";
 import { AnimatePresence, motion } from "framer-motion";
 import AnimatedCounter from "./AnimatedCounter";
-import { div } from "framer-motion/client";
 import { useState } from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 const Konten = () => {
   const dropDownReqType = [
@@ -13,13 +13,11 @@ const Konten = () => {
     },
     {
       title: "Head Hunter",
-      desc:
-        "Menyediakan fasilitas pencarian talent untuk dijadikan karyawan internal.",
+      desc: "Menyediakan fasilitas pencarian talent untuk dijadikan karyawan internal.",
     },
     {
       title: "Project-Based",
-      desc:
-        "Menyediakan fasilitas pencarian vendor untuk menjadi sub-contractor project Anda.",
+      desc: "Menyediakan fasilitas pencarian vendor untuk menjadi sub-contractor project Anda.",
     },
   ];
 
@@ -300,7 +298,7 @@ const Konten = () => {
       <section className="w-full bg-white">
         <div className="max-w-[1200px] mx-auto py-[100px] px-[4%] xl:px-0 flex flex-col xl:flex-row gap-[50px]">
           {/* left */}
-          <div className="space-y-5 xl:w-1/2">
+          <div className="space-y-5 xl:w-1/4">
             <h1 className="font-jost font-medium">Recruitment Type</h1>
             <p className="font-jost font-light">
               Tentukan tipe recruitment anda. Pilihan fasilitas tidak bersifat
@@ -345,32 +343,29 @@ const Konten = () => {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden mt-2 text-gray-700"
                       >
-                        <p className="mt-3 mb-2 font-light">
-                          {item.desc}
-                        </p>
+                        <p className="mt-3 mb-2 font-light">{item.desc}</p>
                       </motion.div>
                     )}
                   </AnimatePresence>
                 </div>
               ))}
-
             </div>
           </div>
           {/* right */}
-          <div className="overflow-x-scroll">
-            <table className="min-w-full table-auto font-jost overflow-x-scroll">
+          <div className="overflow-x-scroll xl:w-3/4">
+            <table className=" table-auto font-jost overflow-x-scroll">
               <thead>
                 <tr className="font-light ">
-                  <th className="px-4 py-2 text-left border-b border-r">
+                  <th className="p-2 text-left border-b border-r">
                     Fasilitas
                   </th>
-                  <th className="px-4 py-2 text-left border-b border-r">
+                  <th className="p-2 text-left border-b border-r">
                     Dedicated Team / Freelance Team
                   </th>
-                  <th className="px-4 py-2 text-left border-b border-r">
+                  <th className="p-2 text-left border-b border-r">
                     Head Hunter
                   </th>
-                  <th className="px-4 py-2 text-left border-b">
+                  <th className="p-2 text-left border-b">
                     Project-Based
                   </th>
                 </tr>
@@ -378,59 +373,128 @@ const Konten = () => {
               <tbody className="tablez">
                 <tr>
                   <td className="px-4 py-2 border-b border-r">Talent Hunt</td>
-                  <td className="px-4 py-2 border-b border-r">V</td>
-                  <td className="px-4 py-2 border-b border-r">V</td>
+                  <td className="px-4 py-2 border-b border-r">
+                    <FontAwesomeIcon
+                      size="xl"
+                      icon={faCheck}
+                      style={{ color: "#63E6BE" }}
+                    />
+                  </td>
+                  <td className="px-4 py-2 border-b border-r">
+                    {" "}
+                    <FontAwesomeIcon
+                      size="xl"
+                      icon={faCheck}
+                      style={{ color: "#63E6BE" }}
+                    />
+                  </td>
                   <td className="px-4 py-2 border-b"></td>
                 </tr>
                 <tr>
                   <td className="px-4 py-2 border-b border-r">CoWork Space</td>
-                  <td className="px-4 py-2 border-b border-r">V</td>
-                  <td className="px-4 py-2 border-b border-r">V</td>
+                  <td className="px-4 py-2 border-b border-r">
+                    {" "}
+                    <FontAwesomeIcon
+                      size="xl"
+                      icon={faCheck}
+                      style={{ color: "#63E6BE" }}
+                    />
+                  </td>
+                  <td className="px-4 py-2 border-b border-r"></td>
                   <td className="px-4 py-2 border-b"></td>
                 </tr>
                 <tr>
                   <td className="px-4 py-2 border-b border-r">
                     Remote Worker / On-Site Worker
                   </td>
-                  <td className="px-4 py-2 border-b border-r">V</td>
-                  <td className="px-4 py-2 border-b border-r">V</td>
+                  <td className="px-4 py-2 border-b border-r">
+                    {" "}
+                    <FontAwesomeIcon
+                      size="xl"
+                      icon={faCheck}
+                      style={{ color: "#63E6BE" }}
+                    />
+                  </td>
+                  <td className="px-4 py-2 border-b border-r"></td>
                   <td className="px-4 py-2 border-b"></td>
                 </tr>
                 <tr>
                   <td className="px-4 py-2 border-b border-r">
                     Resource Operational & Management
                   </td>
-                  <td className="px-4 py-2 border-b border-r">V</td>
-                  <td className="px-4 py-2 border-b border-r">V</td>
+                  <td className="px-4 py-2 border-b border-r">
+                    <FontAwesomeIcon
+                      size="xl"
+                      icon={faCheck}
+                      style={{ color: "#63E6BE" }}
+                    />
+                  </td>
+                  <td className="px-4 py-2 border-b border-r"></td>
                   <td className="px-4 py-2 border-b"></td>
                 </tr>
                 <tr>
                   <td className="px-4 py-2 border-b border-r">HR Manager</td>
-                  <td className="px-4 py-2 border-b border-r">V</td>
-                  <td className="px-4 py-2 border-b border-r">V</td>
+                  <td className="px-4 py-2 border-b border-r">
+                    <FontAwesomeIcon
+                      size="xl"
+                      icon={faCheck}
+                      style={{ color: "#63E6BE" }}
+                    />
+                  </td>
+                  <td className="px-4 py-2 border-b border-r"></td>
                   <td className="px-4 py-2 border-b"></td>
                 </tr>
                 <tr>
                   <td className="px-4 py-2 border-b border-r">IT Consultant</td>
-                  <td className="px-4 py-2 border-b border-r">V</td>
-                  <td className="px-4 py-2 border-b border-r">V</td>
-                  <td className="px-4 py-2 border-b"></td>
+                  <td className="px-4 py-2 border-b border-r">
+                    <FontAwesomeIcon
+                      size="xl"
+                      icon={faCheck}
+                      style={{ color: "#63E6BE" }}
+                    />
+                  </td>
+                  <td className="px-4 py-2 border-b border-r"></td>
+                  <td className="px-4 py-2 border-b">
+                    <FontAwesomeIcon
+                      size="xl"
+                      icon={faCheck}
+                      style={{ color: "#63E6BE" }}
+                    />
+                  </td>
                 </tr>
                 <tr>
                   <td className="px-4 py-2 border-b border-r">
                     Resource Tax and Legal
                   </td>
-                  <td className="px-4 py-2 border-b border-r">V</td>
-                  <td className="px-4 py-2 border-b border-r">V</td>
-                  <td className="px-4 py-2 border-b"></td>
+                  <td className="px-4 py-2 border-b border-r">
+                    <FontAwesomeIcon
+                      size="xl"
+                      icon={faCheck}
+                      style={{ color: "#63E6BE" }}
+                    />
+                  </td>
+                  <td className="px-4 py-2 border-b border-r"></td>
+                  <td className="px-4 py-2 border-b">
+                    <FontAwesomeIcon
+                      size="xl"
+                      icon={faCheck}
+                      style={{ color: "#63E6BE" }}
+                    />
+                  </td>
                 </tr>
                 <tr>
                   <td className="px-4 py-2 border-r">
                     Shared Project Risk & Responsibilty
                   </td>
-                  <td className="px-4 py-2 border-r">V</td>
-                  <td className="px-4 py-2 border-r">V</td>
-                  <td className="px-4 py-2"></td>
+                  <td className="px-4 py-2 border-r"></td>
+                  <td className="px-4 py-2 border-r"></td>
+                  <td className="px-4 py-2">
+                    <FontAwesomeIcon
+                      size="xl"
+                      icon={faCheck}
+                      style={{ color: "#63E6BE" }}
+                    />
+                  </td>
                 </tr>
               </tbody>
             </table>
