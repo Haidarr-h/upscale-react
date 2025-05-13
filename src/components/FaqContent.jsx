@@ -67,8 +67,8 @@ const FaqContent = () => {
   return (
     <>
       <section className="bg-white">
-        <div className="container-main py-[200px]">
-          <div className="flex flex-row gap-3 font-jost">
+        <div className="container-main py-[100px] lg:py-[200px]">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-3 font-jost">
             <div className="flex flex-col flex-1">
               <h3 className="font-medium mb-10 text-2xl">Untuk Perusahaan / Pengusaha</h3>
               <div className="space-y-5">
