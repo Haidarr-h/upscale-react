@@ -1,8 +1,33 @@
 import Departement from "./Departement";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import AnimatedCounter from "./AnimatedCounter";
+import { div } from "framer-motion/client";
+import { useState } from "react";
+
 
 const Konten = () => {
+  const dropDownReqType = [
+    {
+      title: "Dedicated Team / Freelance Team",
+      desc: "Pencarian talent terbaik untuk kebutuhan bisnis Anda. Talent bersedia untuk bekerja on-site maupun remote dan full-time maupun part-time.",
+    },
+    {
+      title: "Head Hunter",
+      desc:
+        "Menyediakan fasilitas pencarian talent untuk dijadikan karyawan internal.",
+    },
+    {
+      title: "Project-Based",
+      desc:
+        "Menyediakan fasilitas pencarian vendor untuk menjadi sub-contractor project Anda.",
+    },
+  ];
+
+  const [openType, setOpenType] = useState(null);
+  const toggleOpenType = (index) => {
+    setOpenType(openType === index ? null : index);
+  };
+
   return (
     <>
       {/* ! section 1 : fokuskan perhatian anda */}
@@ -105,7 +130,11 @@ const Konten = () => {
           </motion.div>
 
           {/* kanan */}
-          <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} className="flex flex-col  xl:w-1/2">
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            className="flex flex-col  xl:w-1/2"
+          >
             {/* per kotak poin */}
             <div className="konten-3-kotak-poin">
               {/* ! kiri (nomor) */}
@@ -184,7 +213,11 @@ const Konten = () => {
       <section className="w-full bg-[rgb(241,245,247)]">
         <div className="max-w-[1200px] xl:px-0 mx-auto px-[4%] flex xl:flex-row flex-col gap-[70px] py-[60px]">
           {/* kiri */}
-          <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} className="flex flex-col gap-[30px] xl:w-1/2 text-center xl:text-left">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            className="flex flex-col gap-[30px] xl:w-1/2 text-center xl:text-left"
+          >
             <h1 className="font-jost font-medium">
               Setelah Anda mendapatkan talent terbaik, Kami tetap mensupport
               kebutuhan bisnis Anda
@@ -207,7 +240,11 @@ const Konten = () => {
           </motion.div>
 
           {/* kanan */}
-          <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} className="flex flex-col xl:w-1/2">
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            className="flex flex-col xl:w-1/2"
+          >
             {/* per kotak poin */}
             <div className="konten-3-kotak-poin">
               {/* ! kiri (nomor) */}
@@ -269,19 +306,54 @@ const Konten = () => {
               Tentukan tipe recruitment anda. Pilihan fasilitas tidak bersifat
               wajib, sehingga masih dapat disesuaikan kembali sesuai kebutuhan.
             </p>
-            <div className="flex flex-col gap-[20px] arrow-box">
-              <div>
-                <img src="arrow.png" alt="" />
-                <p>Dedicated Team / Freelance Team</p>
-              </div>
-              <div>
-                <img src="arrow.png" alt="" />
-                <p>Head Hunter</p>
-              </div>
-              <div>
-                <img src="arrow.png" alt="" />
-                <p>Project-BasedTeam</p>
-              </div>
+            <div className="flex flex-col gap-[20px]">
+              {dropDownReqType.map((item, index) => (
+                <div key={index} className="flex flex-col">
+                  <button
+                    className="flex flex-row gap-4"
+                    onClick={() => toggleOpenType(index)}
+                  >
+                    <motion.div
+                      animate={{ rotate: openType === index ? 90 : 0 }}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={3}
+                        stroke="currentColor"
+                        className="size-6 bg-[rgb(18,48,74)] text-white p-1 rounded-md"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                        />
+                      </svg>
+                    </motion.div>
+                    <h3 className="text-left font-medium text-lg">
+                      {item.title}
+                    </h3>
+                  </button>
+                  <AnimatePresence initial={true}>
+                    {openType === index && (
+                      <motion.div
+                        key="content"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden mt-2 text-gray-700"
+                      >
+                        <p className="mt-3 mb-2 font-light">
+                          {item.desc}
+                        </p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ))}
+
             </div>
           </div>
           {/* right */}
