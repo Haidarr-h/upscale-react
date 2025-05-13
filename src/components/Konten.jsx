@@ -298,7 +298,7 @@ const Konten = () => {
       <section className="w-full bg-white">
         <div className="max-w-[1200px] mx-auto py-[100px] px-[4%] xl:px-0 flex flex-col xl:flex-row gap-[50px]">
           {/* left */}
-          <div className="space-y-5 xl:w-1/4">
+          <div className="space-y-5 xl:w-1/3">
             <h1 className="font-jost font-medium">Recruitment Type</h1>
             <p className="font-jost font-light">
               Tentukan tipe recruitment anda. Pilihan fasilitas tidak bersifat
@@ -306,13 +306,14 @@ const Konten = () => {
             </p>
             <div className="flex flex-col gap-[20px]">
               {dropDownReqType.map((item, index) => (
-                <div key={index} className="flex flex-col">
+                <div key={index}>
                   <button
-                    className="flex flex-row gap-4"
+                    className="flex flex-row gap-5"
                     onClick={() => toggleOpenType(index)}
                   >
                     <motion.div
                       animate={{ rotate: openType === index ? 90 : 0 }}
+                      className="my-auto"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -320,7 +321,7 @@ const Konten = () => {
                         viewBox="0 0 24 24"
                         strokeWidth={3}
                         stroke="currentColor"
-                        className="size-6 bg-[rgb(18,48,74)] text-white p-1 rounded-md"
+                        className="size-6 bg-[rgb(18,48,74)] m-0 text-white p-1 rounded-md"
                       >
                         <path
                           strokeLinecap="round"
@@ -352,7 +353,7 @@ const Konten = () => {
             </div>
           </div>
           {/* right */}
-          <div className="overflow-x-scroll xl:w-3/4">
+          <div className="overflow-x-scroll xl:w-2/3">
             <table className=" table-auto font-jost overflow-x-scroll">
               <thead>
                 <tr className="font-light ">
@@ -360,7 +361,7 @@ const Konten = () => {
                     Fasilitas
                   </th>
                   <th className="p-2 text-left border-b border-r">
-                    Dedicated Team / Freelance Team
+                    Dedicated Team
                   </th>
                   <th className="p-2 text-left border-b border-r">
                     Head Hunter
