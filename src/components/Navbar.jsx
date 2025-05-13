@@ -73,8 +73,22 @@ const Navbar = () => {
 
               {/* drop down */}
               <div className="absolute rounded-md mt-3  bg-white text-black shadow-md opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-1 transition-all duration-500 z-30 space-y-3 w-[90px] h-[100px] items-center flex flex-col justify-center">
-                <a className="flex hover:text-[rgb(71,178,228)]"><img src="https://upscale.id/template/upscale/media/id.png" className="object-contain" alt="" /> ID</a>
-                <a className="flex hover:text-[rgb(71,178,228)]"><img src="https://upscale.id/template/upscale/media/en.png" className="object-contain" alt="" /> EN</a>
+                <a className="flex hover:text-[rgb(71,178,228)]">
+                  <img
+                    src="https://upscale.id/template/upscale/media/id.png"
+                    className="object-contain"
+                    alt=""
+                  />{" "}
+                  ID
+                </a>
+                <a className="flex hover:text-[rgb(71,178,228)]">
+                  <img
+                    src="https://upscale.id/template/upscale/media/en.png"
+                    className="object-contain"
+                    alt=""
+                  />{" "}
+                  EN
+                </a>
               </div>
             </div>
             <div className="space-x-8">
@@ -122,6 +136,15 @@ const Navbar = () => {
               <Link to="/faq" onClick={() => setIsOpen(false)}>
                 F.A.Q
               </Link>
+              <div className="flex flex-row mx-auto gap-3">
+                <img
+                  src="https://upscale.id/template/upscale/media/id.png"
+                  alt="indonesia"
+                  className="w-[18px] h-[12px] my-auto mx-auto"
+                />
+                Indonesia
+              </div>
+
               <button>Login</button>
               <button className="border border-white rounded-full px-3 py-1">
                 Live Chat
