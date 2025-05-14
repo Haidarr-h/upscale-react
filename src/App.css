@@ -42,6 +42,11 @@ p {
   @apply hover:text-[rgb(71,178,228)] hover:transition-all hover:duration-1000;
 }
 
+/* !widget */
+.inputWidget input {
+  @apply border rounded-lg px-3 py-2 text-sm w-4/5;
+}
+
 /* ! hero */
 .highlighted-text {
   display: inline;
