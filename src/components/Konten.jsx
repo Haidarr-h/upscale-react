@@ -354,7 +354,7 @@ const Konten = () => {
           </div>
           {/* right */}
           <div className="overflow-x-scroll xl:w-2/3">
-            <table className=" table-auto font-jost overflow-x-scroll">
+            <table className="table-auto font-jost overflow-x-scroll text-center">
               <thead>
                 <tr className="font-light ">
                   <th className="p-2 text-left border-b border-r">
