@@ -1,13 +1,15 @@
 import React, { useState, useEffect, use } from "react";
 import { Link, useLocation } from "react-router-dom";
+import LoginPage from "./LoginPage";
 
 const Navbar = ({ toggleWidget }) => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  // widget control
-  // const [isWidgetOpen, setWidgetOpen] = useState(false);
-  // const toggleWidget = () => setWidgetOpen(!isWidgetOpen);
+  // login purpose
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const toggleLogin = () => setIsLoginOpen(!isLoginOpen);
+
 
   const [isOpen, setIsOpen] = useState(false);
   const toggleHideNavbar = () => setIsOpen(!isOpen);
@@ -95,7 +97,7 @@ const Navbar = ({ toggleWidget }) => {
               </div>
             </div>
             <div className="space-x-8">
-              <button className="pl-6 border-l">Login</button>
+              <button className="pl-6 border-l" onClick={toggleLogin}>Login</button>
               <button
                 className="border backdrop-blur-lg border-white text-white bg-transparent rounded-full px-3 py-1 hover:bg-[rgb(71,178,228)]  hover:transition-all hover:duration-700"
                 onClick={toggleWidget}
@@ -123,6 +125,9 @@ const Navbar = ({ toggleWidget }) => {
               </svg>
             </button>
           </div>
+
+          {/* if login oppen */}
+          {isLoginOpen && <LoginPage onClose={() => setIsLoginOpen(false)}></LoginPage>}
 
           {/* if is open */}
           {isOpen && (
