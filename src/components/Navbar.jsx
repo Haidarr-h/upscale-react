@@ -1,10 +1,13 @@
 import React, { useState, useEffect, use } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
 
-const Navbar = () => {
+const Navbar = ({ toggleWidget }) => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+
+  // widget control
+  // const [isWidgetOpen, setWidgetOpen] = useState(false);
+  // const toggleWidget = () => setWidgetOpen(!isWidgetOpen);
 
   const [isOpen, setIsOpen] = useState(false);
   const toggleHideNavbar = () => setIsOpen(!isOpen);
@@ -93,7 +96,10 @@ const Navbar = () => {
             </div>
             <div className="space-x-8">
               <button className="pl-6 border-l">Login</button>
-              <button className="border backdrop-blur-lg border-white text-white bg-transparent rounded-full px-3 py-1 hover:bg-[rgb(71,178,228)]  hover:transition-all hover:duration-700">
+              <button
+                className="border backdrop-blur-lg border-white text-white bg-transparent rounded-full px-3 py-1 hover:bg-[rgb(71,178,228)]  hover:transition-all hover:duration-700"
+                onClick={toggleWidget}
+              >
                 Live Chat
               </button>
             </div>

@@ -1,11 +1,6 @@
-import { div } from "framer-motion/client";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import WidgetChat from "../pages/WidgetChat";
-
-const WidgetFloat = () => {
-  const [isWidgetOpen, setWidgetOpen] = useState(false);
-  const toggleWidget = () => setWidgetOpen(!isWidgetOpen);
+const WidgetFloat = ({ toggleWidget, isWidgetOpen }) => {
+  // const [isWidgetOpen, setWidgetOpen] = useState(false);
+  // const toggleWidget = () => setWidgetOpen(!isWidgetOpen);
 
   return (
     <>
@@ -45,7 +40,7 @@ const WidgetFloat = () => {
         )}
       </button>
 
-      {isWidgetOpen && <WidgetChat></WidgetChat>}
+      {/* {isWidgetOpen && <WidgetChat></WidgetChat>} */}
     </>
   );
 };

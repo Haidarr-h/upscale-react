@@ -12,23 +12,27 @@ import WidgetFloat from "./components/WidgetFloat";
 import WidgetChat from "./pages/WidgetChat";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // widget control
+  const [isWidgetOpen, setWidgetOpen] = useState(false);
+  const toggleWidget = () => setWidgetOpen(!isWidgetOpen);
 
   return (
     <>
-      {/* // <Router> */}
-      <Navbar></Navbar>
+      <Navbar toggleWidget={toggleWidget}></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/for-business" element={<ForBusiness></ForBusiness>}></Route>
+        <Route
+          path="/for-business"
+          element={<ForBusiness></ForBusiness>}
+        ></Route>
         <Route path="/for-talent" element={<ForTalent></ForTalent>}></Route>
         <Route path="/jobs" element={<Jobs></Jobs>}></Route>
         <Route path="/faq" element={<Faq></Faq>}></Route>
-        <Route path="/WidgetChat" element={<WidgetChat></WidgetChat>}></Route>
       </Routes>
-      <WidgetFloat></WidgetFloat>
+      <WidgetFloat toggleWidget={toggleWidget} isWidgetOpen={isWidgetOpen}></WidgetFloat>
       <Footer></Footer>
-      {/* // </Router> */}
+
+      {isWidgetOpen && <WidgetChat></WidgetChat>}
     </>
   );
 }
