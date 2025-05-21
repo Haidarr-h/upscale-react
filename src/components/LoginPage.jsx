@@ -4,7 +4,7 @@ const LoginPage = ({ onClose }) => {
   return (
     <>
       <div
-        className="fixed right-0 left-0 top-0 h-screen flex items-center justify-center bg-black bg-opacity-50 text-black"
+        className="fixed right-0 left-0 top-0 h-screen flex items-center justify-center bg-black bg-opacity-50 text-black z-[1000]"
         onClick={onClose}
       >
         <div
