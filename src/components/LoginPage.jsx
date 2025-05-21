@@ -8,32 +8,47 @@ const LoginPage = ({ onClose }) => {
         onClick={onClose}
       >
         <div
-          className="bg-white p-6 rounded shadow-lg"
+          className="bg-white mt-[-20%] p-6 rounded shadow-lg xl:w-[450px]"
           onClick={(e) => e.stopPropagation()}
         >
-          <h2>Login Dashboard</h2>
+          <div className="flex flex-row justify-between">
+            <h2 className="font-jost font-medium text-xl py-2">
+              Login Dashboard
+            </h2>
+            <button onClick={onClose}>X</button>
+          </div>
+
           <hr />
-          <form>
-            <div className="flex flex-row gap-3">
+          <form className="login-form">
+            <div>
               <p>Email</p>
-              <input
-                type="email"
-                placeholder="Type Your Name"
-                className="border rounded-md"
-              />
+              <input type="email" placeholder="Type Your Name" />
             </div>
 
-            <div className="flex flex-row gap-3">
+            <div>
               <p>Password</p>
-              <input
-                type="password"
-                placeholder="Type Your Password"
-                className="border rounded-md"
-              />
+              <input type="password" placeholder="Type Your Password" />
             </div>
+            <a className="text-xs hover:underline text-blue-400 cursor-pointer">Forgot password</a>
           </form>
 
-          <button onClick={onClose}> Save and Close</button>
+          <hr />
+          <div className="flex flex-col text-center gap-3 lg:text-left lg:flex-row justify-between mt-3">
+            <p className="text-xs">
+              Belum punya Akun ?{" "}
+              <a className="text-blue-400 hover:underline cursor-pointer">
+                Click
+              </a>
+            </p>
+            <div className="space-x-4">
+              <button className="border bg-green-600 p-1 text-white rounded-md">
+                Reset Password
+              </button>
+              <button className="border bg-blue-300 p-1 text-white rounded-md">
+                Login
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </>

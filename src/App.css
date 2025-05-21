@@ -47,6 +47,23 @@ p {
   @apply border rounded-lg px-3 py-2 text-sm w-4/5;
 }
 
+/* ! login */
+.login-form  {
+  @apply flex flex-col gap-3 py-4;
+}
+
+.login-form div {
+  @apply flex flex-row justify-between gap-3;
+}
+
+.login-form p,button {
+  @apply text-base;
+}
+
+.login-form input {
+  @apply text-base border rounded-sm w-2/3 p-2;
+}
+
 /* ! hero */
 .highlighted-text {
   display: inline;
