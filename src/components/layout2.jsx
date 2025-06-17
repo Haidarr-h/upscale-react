@@ -6,6 +6,7 @@ const layout2 = () => {
       <h1>layout2</h1>
       <p>this is content about layouting</p>
       <h3>working on the layout</h3>
+      <h4>layout best</h4>
       <ul>
         <li>Item 1</li>
         <li>Item 2</li>
